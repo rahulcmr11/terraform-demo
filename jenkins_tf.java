@@ -12,7 +12,14 @@ node {
         }
 	    
 	    stage('check_init_plan') {
-		    
+		
+		sh '''
+			sudo cd ec2
+			sudo terraform init 
+			sudo terraform plan
+			
+			 
+		'''    
 		println("All look good . Please run the apply deploy")	
         }
 	    
