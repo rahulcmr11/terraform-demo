@@ -14,7 +14,7 @@ resource "aws_instance" "myweb" {
 }
 
 resource "aws_s3_bucket" "b" {
-  bucket = "kilpilpande"
+  bucket = "demo-tf-08022021"
   acl    = "private"
 
   tags = {
