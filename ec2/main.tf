@@ -12,12 +12,12 @@ resource "aws_instance" "myweb" {
   instance_type = "t2.micro"                                ### type of ec2, large , p2 , m5 etc. 
 
   tags = {
-    Name = "demo-web-server-terraform1"                                 ## server  name, change for demo
+    Name = "demo-web-server-terraform2"                                 ## server  name, change for demo
   }
 }
 ## 2nd resource s3 bucket
 resource "aws_s3_bucket" "b" {
-  bucket = "demo-tf-09022021-terraform1"                                  ##bucket name , change for demo                       
+  bucket = "demo-tf-09022021-terraform2"                                  ##bucket name , change for demo                       
   acl    = "private"
 
   tags = {
