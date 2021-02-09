@@ -1,9 +1,9 @@
 import groovy.json.JsonSlurper
 @Library('github.com/releaseworks/jenkinslib') _ 
-String CODE_REPO = "https://github.com/rahulcmr11/terraform-demo.git"
+String CODE_REPO = "https://github.com/rahulcmr11/terraform-demo.git" // clone this git repo
 node {
 
-    ws("terraform-demo-demo") {
+    ws("terraform-demo-demo") {    // workspace for server
 
         stage('checkout-git') {
 
@@ -11,7 +11,7 @@ node {
 
         }
 	    
-	    stage('check_init_plan') {
+	    stage('check_init_plan') {  // run terraform init and plan only which does not make any changes but gives overview
 		
 		sh '''
 			cd ec2
@@ -23,10 +23,10 @@ node {
 		println("All look good . Please run the terraform apply ")	
         }
 	    
-	    stage('apply_the_plan') {
+	    stage('apply_the_plan') {   // after success of above stage run the apply
 		    
 	sh '''
-			whoami
+			sudo terraform apply // apply the terraform 
 			 
 		'''
 			
