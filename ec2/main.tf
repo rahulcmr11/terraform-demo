@@ -5,7 +5,7 @@ provider "aws" {                                  ### provider is aws, can be az
 
 }
 
-## 1st resource , will be created
+## 1st resource EC2 , will be created
 
 resource "aws_instance" "myweb" {
   ami           = "ami-01aab85a5e4a5a0fe"                   ### AMI id for ec2
