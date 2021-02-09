@@ -1,5 +1,5 @@
 provider "aws" {                                  ### provider is aws, can be azure , google etc.
- region = "us-east-2"                             ### region to create aws resources.
+ region = "us-east-1"                             ### region to create aws resources.
  shared_credentials_file = "/home/ubuntu/rahul-demo/credentials"          ### Credetials to connect aws and terraform cli stored in file
  profile = "TF"                                                  ### profile name of saved aws credentials 
 
