@@ -8,7 +8,7 @@ provider "aws" {                                  ### provider is aws, can be az
 ## 1st resource , will be created
 
 resource "aws_instance" "myweb" {
-  ami           = "ami-0b6fd73535e4b992b"                   ### AMI id for ec2
+  ami           = "ami-01aab85a5e4a5a0fe"                   ### AMI id for ec2
   instance_type = "t2.micro"                                ### type of ec2, large , p2 , m5 etc. 
 
   tags = {
