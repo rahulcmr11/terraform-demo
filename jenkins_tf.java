@@ -26,7 +26,7 @@ node {
 	    stage('apply_the_plan') {   // after success of above stage run the apply
 		    
 	sh '''
-			sudo terraform apply # apply the terraform 
+			sudo terraform apply -auto-approve # apply the terraform 
 			 
 		'''
 			
