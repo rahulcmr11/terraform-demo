@@ -20,7 +20,7 @@ node {
 			
 			 
 		'''    
-		println("All look good . Please run the apply deploy")	
+		println("All look good . Please run the terraform apply ")	
         }
 	    
 	    stage('apply_the_plan') {
