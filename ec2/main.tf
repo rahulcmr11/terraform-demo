@@ -6,7 +6,6 @@ provider "aws" {                                  ### provider is aws, can be az
 }
 
 ## 1st resource EC2 , will be created
-
 resource "aws_instance" "myweb" {
   ami           = "ami-01aab85a5e4a5a0fe"                   ### AMI id for ec2
   instance_type = "t2.micro"                                ### type of ec2, large , p2 , m5 etc. 
@@ -17,7 +16,7 @@ resource "aws_instance" "myweb" {
 }
 ## 2nd resource s3 bucket
 resource "aws_s3_bucket" "b" {
-  bucket = "demo-tf-09022021-terraform2"                                  ##bucket name , change for demo                       
+  bucket = "demo-tf-09022021-terraform3"                                  ##bucket name , change for demo                       
   acl    = "private"
 
   tags = {
