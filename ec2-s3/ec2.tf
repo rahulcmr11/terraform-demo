@@ -10,7 +10,7 @@ resource "aws_instance" "myweb" {
   instance_type = "t2.micro"                                ### type of ec2, large , p2 , m5 etc. 
 
   tags = {
-    Name = "demo-web-server-terraform2"                                 ## server  name, change for demo
+    Name = "demo-web-server-terraform"                                 ## server  name, change for demo
   }
 }
 
