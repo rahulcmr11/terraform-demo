@@ -37,7 +37,7 @@ node {
 	stage('tf_state_file') {   // after success of above stage run the apply
 		    
 	sh '''
-	    sudo cd /var/lib/jenkins/terraform-demo-demo/terraform-demo/ec2-s3/
+	    cd /var/lib/jenkins/terraform-demo-demo/terraform-demo/ec2-s3/
 	    sudo git add terraform.tfstate
 	    sudo git commit -m "After apply run"
 	    sudo git push
