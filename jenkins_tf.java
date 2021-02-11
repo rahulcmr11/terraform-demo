@@ -28,6 +28,9 @@ node {
 	sh '''
 	    cd ec2-s3
 	    sudo terraform apply -auto-approve # apply the terraform 
+	    git add terraform.tfstate
+	    git commit -m "Apply has ran"
+	    git push
 			 
 	  '''
 			
