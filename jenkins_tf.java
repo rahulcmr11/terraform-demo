@@ -27,15 +27,26 @@ node {
 		    
 	sh '''
 	    cd ec2-s3
-	    sudo terraform apply -auto-approve # apply the terraform 
-	    git add terraform.tfstate
-	    git commit -m "Apply has ran"
-	    git push
+	    sudo terraform apply -auto-approve # apply the terraform
+	    sudo cp /var/lib/jenkins/terraform-demo-demo/ec2-s3/terraform.tfstate /var/lib/jenkins/terraform-demo-demo/terraform-demo/ec2-s3/terraform.tfstate
+
 			 
 	  '''
 			
         }
+	stage('tf_state_file') {   // after success of above stage run the apply
+		    
+	sh '''
+	    cd /var/lib/jenkins/terraform-demo-demo/terraform-demo/ec2-s3/
+	    sudo git pull
+	    sudo git add terraform.tfstate
+	    sudo git commit -m "After apply run"
+	    sudo git push
 	    
+			 
+	  '''
+			
+        }    
         }
         }
 
