@@ -14,7 +14,7 @@ node {
 	    stage('check_init_plan') {  // run terraform init and plan only which does not make any changes but gives overview
 		
 		sh '''
-			cd ec2
+			cd ec2-s3
 			sudo terraform init 
 			sudo terraform plan
 			
@@ -26,7 +26,7 @@ node {
 	    stage('apply_the_plan') {   // after success of above stage run the apply
 		    
 	sh '''
-	    cd ec2
+	    cd ec2-s3
 	    sudo terraform apply -auto-approve # apply the terraform 
 			 
 	  '''
