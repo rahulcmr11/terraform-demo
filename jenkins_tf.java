@@ -38,6 +38,7 @@ node {
 		    
 	sh '''
 	    cd /var/lib/jenkins/terraform-demo-demo/terraform-demo/ec2-s3/
+	    sudo git pull
 	    sudo git add terraform.tfstate
 	    sudo git commit -m "After apply run"
 	    sudo git push
