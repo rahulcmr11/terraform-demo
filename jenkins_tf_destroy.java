@@ -32,6 +32,20 @@ node {
 	  '''
 			
         }
+	
+	stage('tf_state_file') {   // after success of above stage run this
+		    
+	sh '''
+	    cd /var/lib/jenkins/terraform-demo-demo/terraform-demo/ec2-s3/
+	    sudo git pull
+	    sudo git add terraform.tfstate
+	    sudo git commit -m "After destroy run"
+	    sudo git push
+	    
+			 
+	  '''
+			
+        }   
 	    
         }
         }
