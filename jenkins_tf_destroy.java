@@ -14,7 +14,7 @@ node {
 	    stage('check_init') {  // run terraform init 
 		
 		sh '''
-			cd ec2
+			cd ec2-s3
 			sudo terraform init 
 			
 			
@@ -26,7 +26,7 @@ node {
 	    stage('destroy_the_resources') {   // after success of above stage run the apply
 		    
 	sh '''
-	    cd ec2
+	    cd ec2-s3
 	    sudo terraform destroy -auto-approve # destroy resources  
 			 
 	  '''
